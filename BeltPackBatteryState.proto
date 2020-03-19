@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package dca.DeviceState;
+
+message beltpackbatterystate {
+    bool charging = 1;
+    uint32 battery = 2;
+}

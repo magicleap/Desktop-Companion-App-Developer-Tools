@@ -1,0 +1,28 @@
+syntax = "proto3";
+package dca.directory;
+
+enum file_type {
+    file_unknown = 0;
+    directory = 1;
+    regular = 2;
+}
+
+enum access_priv {
+    read = 0;
+    write = 1;
+    read_write = 2;
+    no_access = 3;
+}
+
+message directory_entry {
+    string path = 1;
+    file_type type = 2;
+    access_priv permission = 3;
+    uint64 time_stamp = 4;
+    uint64 file_size = 5;
+    //todo add access from logic
+}
+
+message directory_contents {
+    repeated directory_entry entries = 1;
+}

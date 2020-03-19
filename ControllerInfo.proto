@@ -1,0 +1,16 @@
+syntax = "proto3";
+//import "google/protobuf/wrappers.proto";
+
+package dca.DeviceState;
+
+message controllerinfo {
+    string name = 1;
+    uint32 hw_version = 2;
+    string firmware = 3;
+    uint32 battery = 4;
+    int32 errorCode = 5;
+}
+
+message controllerlist {
+    repeated controllerinfo controllers = 1;
+}

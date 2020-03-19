@@ -1,0 +1,15 @@
+syntax = "proto3";
+//import "google/protobuf/wrappers.proto";
+
+package dca.DeviceState;
+
+
+message deviceinfo {
+    string ro_product_manufacturer = 1;
+    string ro_product_model = 2;
+    string ro_ml_build_os = 3;
+    string ro_ml_build_version_release = 4;
+    string ro_opengles_version = 5;
+    string ro_board_platform = 6;
+    string ro_ml_shipping_api_level = 7;
+}
